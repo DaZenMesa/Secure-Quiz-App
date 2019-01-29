@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Page1{% endblock %}
+
+{% block content %}
+  <h1>Page3</h1>
+  <p>3. Name the school that Harry Potter attended? </p>
+  <form action = {{url_for('renderFinal')}} method = 'POST'>
+    <input type="text" name="anwser3">
+    <input type = 'submit' value = 'Submit'>
+  </form>
+{% endblock %}

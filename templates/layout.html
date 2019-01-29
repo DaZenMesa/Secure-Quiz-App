@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>{% block title %}{% endblock %}Secure Quiz Project</title>
+</head>
+
+<body>
+
+<div id="content">{% block content %}{% endblock %}</div>
+
+<div id="footer">
+
+ {% if 'anwser1' in session %}
+   Anwser#1: {{ session['anwser1'] }}<br>
+ {% endif %}
+
+ {% if 'anwser2' in session %}
+   Anwser#2: {{ session['anwser2'] }}<br>
+ {% endif %}
+
+ {% if 'anwser3' in session %}
+   Anwser#3: {{ session['anwser3'] }}<br>
+ {% endif %}
+
+
+ <a href="/startOver">Start over</a>
+
+</div>
+
+</body>
+
+</html>

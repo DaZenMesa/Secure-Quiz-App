@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Page1{% endblock %}
+
+{% block content %}
+  <h1>Page1</h1>
+  <p>1. What sweet food made by bees using nectar from flowers?</p>
+  <form action = {{url_for('renderPage2')}} method = 'POST'>
+    <input type="text" name="anwser1">
+    <input type = 'submit' value = 'Submit'>
+  </form>
+{% endblock %}
